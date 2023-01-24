@@ -23,7 +23,7 @@ const app = createApp({
       })
       .catch(err => {
         alert(err.data.message);
-        window.location = "/login.html";
+        window.location = "login.html";
       })
     },
     getProduct(){
@@ -54,7 +54,6 @@ const app = createApp({
       })
     },
     deleteProduct(){
-
       axios.delete(`${url}/api/${path}/admin/product/${this.tempProduct.id}`)
       .then(() => {
         this.getProduct();
@@ -74,7 +73,7 @@ const app = createApp({
         this.isNew = true;
       }else if(status === 'edit'){
         productModal.show();
-        
+
         this.tempProduct = {...product};
         this.isNew = false;
       }else if(status === 'delete'){

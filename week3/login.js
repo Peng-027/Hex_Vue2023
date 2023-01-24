@@ -15,7 +15,7 @@ const app = {
       .then(res => {
         const {expired, token} = res.data;
         document.cookie = `hex_token=${token}; expires=${new Date(expired)}`;
-        window.location = "/product.html";
+        window.location = "product.html";
       })
       .catch(err => {
         console.log(err);
