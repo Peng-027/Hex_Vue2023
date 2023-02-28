@@ -37,7 +37,6 @@
                   :style="{backgroundImage: `url(${product.imageUrl})`}"></div>
                 </td>
                 <td>
-                  {{  }}
                 </td>
                 <td>
                   <div v-if="product.price === product.origin_price" class="h5">{{ product.price }} 元</div>
@@ -100,7 +99,6 @@
                     {{ item.total }}
                   </td>
                 </tr>
-                {{loadingItem}}
               </template>
             </tbody>
             <tfoot>
